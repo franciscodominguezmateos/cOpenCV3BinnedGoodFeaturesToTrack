@@ -2,7 +2,7 @@
  * binned_detector.h
  *
  *  Created on: Oct 30, 2016
- *      Author: francisco
+ *      Author: Francisco Dominguez
  */
 
 #ifndef BINNED_DETECTOR_H_
