@@ -92,13 +92,12 @@ public:
 		dkpt.clear();
 		vector<Point2f> points;
         cv::goodFeaturesToTrack(imgBin, points, MAX_COUNT, 0.01, 10, Mat(), 3, 0, 0.04);
-        //cornerSubPix(imgBin, points, subPixWinSize, Size(-1,-1), termcrit);
+        //cornerSubPix(imgBin, points, subPixWinSize, Size(-1,-1), termcrit);//give error
 		//relocate
 		for(unsigned int k=0;k<points.size();k++){
 			Point2f p=points[k]+Point2f(j,i);
-			if(p.x>0 && p.x<img.cols & p.y>0 && p.y<img.rows){
+			//if(p.x>0 && p.x<img.cols & p.y>0 && p.y<img.rows)
 				dkpt.push_back(KeyPoint(p,1));
-			}
 		}
 	}
 
