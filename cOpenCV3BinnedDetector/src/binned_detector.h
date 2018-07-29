@@ -124,7 +124,7 @@ public:
 		//detector->detect(imgBin, dkpt);
 		dkpt.clear();
 		vector<Point2f> points;
-        cv::goodFeaturesToTrack(imgBin, points, MAX_COUNT, 0.01, 10, Mat(), 3, 0, 0.04);
+        cv::goodFeaturesToTrack(imgBin, points, MAX_COUNT, 0.01, 10, Mat(), 3, false, 0.04);
         //cornerSubPix(imgBin, points, subPixWinSize, Size(-1,-1), termcrit);//give error
 		//relocate
 		for(unsigned int k=0;k<points.size();k++){
